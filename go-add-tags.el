@@ -141,7 +141,7 @@
   "Add field tags for struct fields."
   (interactive
    (list
-    (let ((tags (completing-read "Tags: " '(json yaml toml))))
+    (let ((tags (completing-read "Tags: " '(json yaml toml bson))))
       (if (string-match-p "," tags)
           (mapcar #'s-trim (s-split "," tags t))
         (list tags)))
